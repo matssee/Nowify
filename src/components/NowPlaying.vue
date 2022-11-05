@@ -238,7 +238,7 @@ export default {
           image: this.playerResponse.item.album.images[0].url,
           releaseDate: this.playerResponse.item.album.release_date
         },
-        popularity: this.playerResponse.item.popularity
+        popularity: String(this.playerResponse.item.popularity)
       }
     },
 
