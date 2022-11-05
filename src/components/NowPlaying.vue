@@ -16,7 +16,7 @@
         <h1 class="now-playing__track" v-text="player.trackTitle"></h1>
         <h2 class="now-playing__artists" v-text="getTrackArtists"></h2>
         <h2 class="now-playing__artists" v-text="player.trackAlbum.title"></h2>
-        <h3 class="now-playing__artists" v-text="Popularity: player.popularity"></h2>
+        <h3 class="now-playing__artists" prefix="Popularity: " v-text="player.popularity"></h2>
         <h3 class="now-playing__artists" v-text="player.trackAlbum.releaseDate"></h2>
       </div>
     </div>
