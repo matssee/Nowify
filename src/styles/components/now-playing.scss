@@ -4,6 +4,15 @@
  * Styles for the 'Now Playing' screen.
  *
  */
+
+ .h1 {
+  font-size: 200%;
+ }
+
+ .h3 {
+  font-size: 200%;
+ }
+
 .now-playing {
   background-color: var(--colour-background-now-playing);
   color: var(--color-text-primary);
