@@ -15,7 +15,7 @@
       <div class="now-playing__details">
         <h1 class="now-playing__track" v-text="player.trackTitle"></h1>
         <h2 class="now-playing__artists" v-text="getTrackArtists"></h2>
-        <h2 class="now-playing__artists" v-text="player.trackAlbum.title"></h2>
+        <h3 class="now-playing__artists" v-text="player.trackAlbum.title"></h3>
         <h3 class="now-playing__artists" v-text="player.popularity"></h3>
         <h3 class="now-playing__artists" v-text="player.trackAlbum.releaseDate"></h3>
       </div>
@@ -234,9 +234,9 @@ export default {
         trackTitle: this.playerResponse.item.name,
         trackId: this.playerResponse.item.id,
         trackAlbum: {
-          title: this.playerResponse.item.album.name,
+          title: "Album: " + this.playerResponse.item.album.name,
           image: this.playerResponse.item.album.images[0].url,
-          releaseDate: this.playerResponse.item.album.release_date
+          releaseDate: "Release Date: " + this.playerResponse.item.album.release_date
         },
         //popularity: String(this.playerResponse.item.popularity)
         popularity: "Popularity: " + this.playerResponse.item.popularity.toString() + "/100"
