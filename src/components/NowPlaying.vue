@@ -16,7 +16,7 @@
         <h1 class="now-playing__track" v-text="player.trackTitle"></h1>
         <h2 class="now-playing__artists" v-text="getTrackArtists"></h2>
         <h2 class="now-playing__artists" v-text="player.trackAlbum.title"></h2>
-        <h3 class="now-playing__artists" prefix="Popularity: " v-text="player.popularity"></h2>
+        <h3 class="now-playing__artists" v-text="player.popularity"></h2>
         <h3 class="now-playing__artists" v-text="player.trackAlbum.releaseDate"></h2>
       </div>
     </div>
@@ -238,7 +238,7 @@ export default {
           image: this.playerResponse.item.album.images[0].url,
           releaseDate: this.playerResponse.item.album.release_date
         },
-        popularity: String(this.playerResponse.item.popularity)
+        popularity: "Popularity: " + String(this.playerResponse.item.popularity)
       }
     },
 
