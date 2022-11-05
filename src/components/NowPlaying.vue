@@ -15,6 +15,8 @@
       <div class="now-playing__details">
         <h1 class="now-playing__track" v-text="player.trackTitle"></h1>
         <h2 class="now-playing__artists" v-text="getTrackArtists"></h2>
+        <h2 class="now-playing__artists" v-text="player.trackAlbum.title"></h2>
+        <h2 class="now-playing__artists" v-text="player.popularity"></h2>
       </div>
     </div>
     <div v-else class="now-playing" :class="getNowPlayingClass()">
@@ -233,7 +235,9 @@ export default {
         trackAlbum: {
           title: this.playerResponse.item.album.name,
           image: this.playerResponse.item.album.images[0].url
-        }
+          releaseDate: this.playerResponse.item.album.release_date
+        },
+        popularity: this.playerResponse.item.popularity
       }
     },
 
