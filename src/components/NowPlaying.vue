@@ -239,7 +239,7 @@ export default {
           releaseDate: this.playerResponse.item.album.release_date
         },
         //popularity: String(this.playerResponse.item.popularity)
-        popularity: this.playerResponse.item.popularity.toString()
+        popularity: "Popularity: " + this.playerResponse.item.popularity.toString()
       }
     },
 
